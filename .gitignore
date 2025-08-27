@@ -62,9 +62,10 @@ shell_output_save/
 # Vercel
 .vercel
 
-# Capacitor
+# Capacitor (not needed for web deployment)
 android/
 ios/
+.capacitor/
 
 # Runtime files
 download/
@@ -73,8 +74,20 @@ memory/
 extract/
 user_input_files/
 
-# QA temporary files
+# QA temporary files (not needed for production)
 *.docx
 *.pdf
 screenshot*.png
 *.jpg
+
+# Testing and QA files (not needed for production)
+tests/
+qa/
+playwright.config.ts
+lighthouserc.json
+
+# Documentation (not needed for production)
+github-setup.md
+
+# Alternative app implementations (not needed if using main Vite app)
+wisetrip-nextjs/
