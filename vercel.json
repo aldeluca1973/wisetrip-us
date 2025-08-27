@@ -96,17 +96,6 @@
       "permanent": false
     }
   ],
-  "functions": {
-    "api/health.js": {
-      "runtime": "nodejs20.x"
-    },
-    "api/sitemap.js": {
-      "runtime": "nodejs20.x"
-    },
-    "api/robots.js": {
-      "runtime": "nodejs20.x"
-    }
-  },
   "env": {
     "NODE_ENV": "production"
   },
