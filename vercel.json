@@ -15,16 +15,6 @@
       "use": "@vercel/static-build"
     }
   ],
-  "routes": [
-    {
-      "src": "/api/(.*)",
-      "dest": "/api/$1"
-    },
-    {
-      "src": "/(.*)",
-      "dest": "/index.html"
-    }
-  ],
   "headers": [
     {
       "source": "/api/(.*)",
@@ -77,6 +67,10 @@
     {
       "source": "/robots.txt",
       "destination": "/api/robots"
+    },
+    {
+      "source": "/((?!api/).*)",
+      "destination": "/index.html"
     }
   ],
   "redirects": [
