@@ -26,22 +26,22 @@
   "author": "WiseTrip Team <team@wisetrip.us>",
   "license": "MIT",
   "scripts": {
-    "dev": "yes | pnpm install && vite",
-    "build": "yes | pnpm install && rm -rf node_modules/.vite-temp && tsc -b && vite build",
-    "build:prod": "yes | pnpm install && rm -rf node_modules/.vite-temp && tsc -b && BUILD_MODE=prod vite build",
-    "lint": "yes | pnpm install && eslint .",
-    "lint:fix": "yes | pnpm install && eslint . --fix",
-    "preview": "yes | pnpm install && vite preview",
+    "dev": "npm install && vite",
+    "build": "npm install && rm -rf node_modules/.vite-temp && tsc -b && vite build",
+    "build:prod": "npm install && rm -rf node_modules/.vite-temp && tsc -b && BUILD_MODE=prod vite build",
+    "lint": "npm install && eslint .",
+    "lint:fix": "npm install && eslint . --fix",
+    "preview": "npm install && vite preview",
     "type-check": "tsc --noEmit",
     "cap:sync": "cap sync",
     "cap:ios": "cap run ios",
     "cap:android": "cap run android",
-    "cap:build:ios": "pnpm build && cap sync ios && cap build ios",
-    "cap:build:android": "pnpm build && cap sync android && cap build android",
+    "cap:build:ios": "npm run build && cap sync ios && cap build ios",
+    "cap:build:android": "npm run build && cap sync android && cap build android",
     "test": "playwright test",
     "test:ui": "playwright test --ui",
     "clean": "rm -rf dist node_modules/.vite-temp .vite",
-    "install:clean": "rm -rf node_modules pnpm-lock.yaml && pnpm install"
+    "install:clean": "rm -rf node_modules package-lock.json && npm install"
   },
   "dependencies": {
     "@capacitor/android": "^7.4.3",
@@ -152,7 +152,6 @@
     ]
   },
   "engines": {
-    "node": ">=18.0.0",
-    "pnpm": ">=8.15.6"
+    "node": ">=18.0.0"
   }
 }
